@@ -41,6 +41,11 @@ text {
 
 }
 
+.churchContent {
+
+    background-color: #D2C6BB;
+}
+
 #rainbowBreak {
 
     width: 100%;
@@ -50,6 +55,26 @@ text {
     z-index: 3;
 }
 
+#content {
+
+    background-color: #a8e6cf;
+}
+
+.churchH1 {
+
+    font-family: 'Cinzel', serif;
+    font-size: 105px;
+    font-weight: bolder;
+    color: #182F41;
+    margin-right: 5%;
+    margin-left: 50%;
+    padding-top: 250px;
+    text-align: right;
+    font-kerning: auto;
+
+
+}
+
 .contentBG {
     background-color: #a8e6cf;
     margin-top: -110px;
@@ -57,15 +82,10 @@ text {
 
     z-index: 2;
     height: 200%;
-}
-
-#contentFG {
-    padding-top: 150px;
-
-
-
 
 }
+
+#contentFG {}
 
 .common {
     margin: auto;
@@ -73,6 +93,17 @@ text {
     color: purple;
 
 
+}
+
+#oilPainting {
+
+    background: url("../imgz/unicornOilPainting1400.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 900px;
+    margin-top: -20px;
 }
 
 #list {
