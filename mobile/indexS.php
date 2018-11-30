@@ -13,10 +13,12 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css">
     <link rel="stylesheet" href="../css/styleS.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Bubbler+One" rel="stylesheet">
+    <link rel="stylesheet" href="../css/menuS.css" type="text/css">
 
 </head>
 
 <body>
+    <?php   include '../mobile/menuS.php';?>
     <h1>
         It’s going to be a rainbow and unicorns kind of day.
     </h1>

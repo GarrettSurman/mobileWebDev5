@@ -40,7 +40,9 @@ text {
     width: 100%;
     margin: 0px;
     padding: 0px;
-
+    border-top: 15px;
+    border-top-style: solid;
+    border-color: #ffffff;
 }
 
 #rainbowBreak {
@@ -106,9 +108,6 @@ text {
     background-size: cover;
     height: 900px;
     margin-top: -20px;
-    border-bottom: 15px;
-    border-bottom-style: solid;
-    border-color: #ffffff;
 }
 
 #list {
@@ -136,6 +135,7 @@ text {
     padding-bottom: 5%;
 }
 
+
 .churchContent p {
     color: #182F41;
     font-size: 2em;
@@ -145,7 +145,8 @@ text {
     margin-top: 35px;
 }
 
-.churchContent h2 {color: #182F41;
+.churchContent h2 {
+    color: #182F41;
     font-family: 'Cinzel', serif;
     font-size: 3em;
     font-weight: bolder;
@@ -159,19 +160,12 @@ text {
 #oldDrawing {
     border-radius: 4%;
 
-    margin-top: 15%;
+    margin-top: 25%;
     border-color: #654321;
     border-width: 5px;
     border-style: solid;
-    margin-left: 5%;
+    margin-left: 20%;
 
-}
-
-#oldBook {
-
-    margin-top: 15%;
-    margin-left: 5%;
-  
 }
 
 .terms {

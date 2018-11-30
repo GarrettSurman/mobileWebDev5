@@ -31,11 +31,13 @@ $mobile=false;
     <title>Church of the Unicorn</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css">
     <link rel="stylesheet" href="css/styleLG.css" type="text/css">
+    <link rel="stylesheet" href="css/menu.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Bubbler+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+    <script src="jquery-3.3.1.min.js"></script>
 </head>
 
 <body>
@@ -44,19 +46,10 @@ $mobile=false;
 
 
 
-
     <div id="content">
 
-
-
-
-
-
-
-
-
-
-        <div class="row">
+        <div>
+            <?php   include 'menu.php';?>
             <div id="oilPainting">
 
 
@@ -65,57 +58,72 @@ $mobile=false;
 
 
             </div>
-            <div class="churchContent row">
-                <div class="col-md-5 col-md-offset-1">
-                    <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
-                </div>
-
-
-
-                <div class="col-md-5 col-md-offset-1">
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-
-            <form id="donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                <input type="hidden" name="cmd" value="_donations" />
-                <input type="hidden" name="business" value="YFYK2G38AV8KU" />
-                <input type="hidden" name="currency_code" value="USD" />
-                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-            </form>
-
-
-
-
-
-            <div id="browser">
-                You are viewing this page from
-                <br>
-                <!--yea yea shame shame I know-->
-                <?php
-                $useragent=$_SERVER['HTTP_USER_AGENT'];
-
-                print $useragent;
-
-
-
-                include 'footer.php';?>
-
-
-            </div>
-
-
         </div>
+        <div class="churchContent no-gutters row">
+            <div class="col-md-6 ">
+                <h2>Positive Vibes </h2>
+                <p>
+                    The Church of the unicorn has been dedicated to celebrating the unicorn for as long as man has had the capacity to belive. The church sees the unicorn as a religious entity and praised it for all the magic it blesses on us. The unicorn boast its magic to all and those lucky enough to believe it in will soon start to see good fortune as the unicorn blesses us in the form of all pureness in this and other universes. The unicorn will forever be giving. It is our duty as patrons of the magical entity to accept and cherish all that is bestowed upon us. To give and to get in the name of the one horned lover of all is all that is asked and in return a lifetime of love and friendship.Feel free to read an excerpt of the sacred text and interperate however you like*<sup class="terms"> FOR A LIFETIME OF FRIENDSHIP A ONE TIME DONATION IS REQIRED.</sup>
+
+                </p>
+
+
+
+            </div>
+
+
+
+            <div class="col-md-6">
+
+                <img id="oldDrawing" class="img-fluid " src="imgz/unicornDrawingOld.jpg">
+                <p style="text-align:center;">figure 1.1</p>
+
+
+
+
+            </div>
+
+            <!--<div class="donate row">
+
+    <div class="col-md-3 ">
+    </div>
+    <div class="col-md-3 offset-md-4">
+
+
+
+
+        THE CHURCH IS <u>SATIRICAL</u> IF YOU LIKE MY WORK PLEASE FEEL FREE TO BUY ME A COFFEE AND ILL KEEP THE WORK COMING.
+
+        IF YOU ADD YOUR NAME AND EMAIL I WILL EMAIL YOU A PRINTABLE CHURCH CERTIFICATION WITH YOUR NAME ON IT.
+
+
+
+
+    </div>
+    <div class="col-md-3">
+        <form id="donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_donations" />
+            <input type="hidden" name="business" value="YFYK2G38AV8KU" />
+            <input type="hidden" name="currency_code" value="USD" />
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+            <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+        </form>
+
+    </div>
+
+</div>-->
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
 
 
 </body>

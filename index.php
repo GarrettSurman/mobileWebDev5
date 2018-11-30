@@ -31,13 +31,14 @@ $mobile=false;
     <title>HW5 HW5 HW5 HW5 HW5 HW5</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css">
     <link rel="stylesheet" href="css/styleLG.css" type="text/css">
+    <link rel="stylesheet" href="css/menu.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Bubbler+One" rel="stylesheet">
 
 </head>
 
 <body>
 
-
+<?php   include 'menu.php';?>
     <svg viewBox="0 0 425 300">
         <path id="curve" d="M6,150C49.63,93,105.79,36.65,156.2,47.55,207.89,58.74,213,131.91,264,150c40.67,14.43,108.57-6.91,229-145" />
         <text x="25">

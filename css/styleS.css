@@ -7,6 +7,7 @@
 h1 {
     color: yellow;
     text-align: center;
+    margin-top: 30%;
 
 
 }
@@ -27,7 +28,7 @@ body {
 .break {
 
     height: 3px;
-    background-color: purple;
+    background-color: #ffff00;
     margin-bottom: 100px;
 }
 
@@ -43,7 +44,7 @@ html {
 
 .contentBG {
 
-    margin-top: 110px;
+    margin-top: 210px;
     /* Set a specific height */
 
     z-index: 2;
@@ -57,28 +58,52 @@ html {
 
 }
 
+#content {
+
+    background-color: #ff8b94;
+
+}
+
+
+.churchContent h2 {
+    color: #182F41;
+    font-family: 'Cinzel', serif;
+    font-size: 5em;
+    font-weight: bolder;
+    text-align: center;
+
+    margin-top: 45px
+}
+
+
+.churchContent p {
+    padding: 4%;
+    font-size: 4em;
+
+}
+
+#oldDrawing {
+    border-radius: 4%;
+    width: 90%;
+    margin-top: 15%;
+    border-color: #654321;
+    border-width: 5px;
+    border-style: solid;
+    margin-left: 5%;
+
+}
+
+#oldBook {
+
+    margin-top: 15%;
+    margin-left: 5%;
+
+}
+
 .common {
     margin: auto;
     text-align: center;
-    color: purple;
+    color: #a8e6cf;
 
 
-}
-
-#list {
-    font-size: 1.5em;
-    color: purple;
-    list-style: none;
-
-}
-
-#list li {
-    padding-bottom: 122px;
-
-}
-
-#browser {
-    text-align: center;
-    color: purple;
-    padding-top: 200px;
 }
