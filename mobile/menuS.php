@@ -40,10 +40,15 @@ echo"
                 <a href='indexS.php'>
                     <li>Home</li>
                 </a>
-            <a href='churchS.php'>
-                    <li>Church</li>
-                </a>
-  
+<a href='churchS.php'>
+    <li>Church</li>
+</a>
+<a href='theSearchS.php'>
+    <li>The Search</li>
+</a>
+<a href='galleryS.php'>
+    <li>Gallery</li>
+</a>
              
     
                 

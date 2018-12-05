@@ -10,19 +10,9 @@ echo"
      
     
         <div id='menuToggle'>
-            <!--
-    A fake / hidden checkbox is used as click reciever,
-    so you can use the :checked selector on it.
-    -->
-            <input type='checkbox' />
 
-            <!--
-    Some spans to act as a hamburger.
-    
-    They are acting like a real hamburger,
-    not that McDonalds stuff.
-    -->
-            <span></span>
+            <input type='checkbox' />
+  <span></span>
             <span></span>
             <span></span>
             
@@ -43,6 +33,12 @@ echo"
                 </a>
                 <a href='church.php'>
                     <li>Church</li>
+                </a>
+                <a href='theSearch.php'>
+                    <li>The Search</li>
+                </a>
+                <a href='gallery.php'>
+                    <li>The Search</li>
                 </a>
                 <a href='texts.php'>
                     <li>Sacred Texts</li>

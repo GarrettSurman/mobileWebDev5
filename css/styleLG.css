@@ -145,7 +145,8 @@ text {
     margin-top: 35px;
 }
 
-.churchContent h2 {color: #182F41;
+.churchContent h2 {
+    color: #182F41;
     font-family: 'Cinzel', serif;
     font-size: 3em;
     font-weight: bolder;
@@ -171,7 +172,7 @@ text {
 
     margin-top: 15%;
     margin-left: 5%;
-  
+
 }
 
 .terms {
@@ -183,4 +184,205 @@ text {
 
 .donate {
     padding-top: 50%;
+}
+
+/* MISSION PAGE*/
+#myVideo {
+    max-height: 100%;
+    max-width: 100%;
+    right: 0;
+    bottom: 0;
+
+
+
+}
+
+.dropShadow {
+    color: #120033;
+    text-shadow: 5px 5px #fdfd96;
+    font-family: 'Pacifico', cursive;
+    margin-top: 0px;
+}
+
+#mission {
+
+    position: absolute;
+
+    top: 2%;
+    left: 5%;
+
+    font-size: 8vw;
+
+
+
+
+}
+
+#mission2 {
+    color: #120033;
+    position: absolute;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    top: 30%;
+    left: 10%;
+    font-size: 8vw;
+
+    -webkit-animation: 1s ease 0s normal forwards 1 fadein;
+    -webkit-animation: fadein 8s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 5s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 5s;
+    /* Internet Explorer */
+    -o-animation: fadein 5s;
+    /* Opera < 12.1 */
+    animation: fadein 6s;
+
+}
+
+#mission3 {
+    color: #120033;
+    position: absolute;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    top: 50%;
+    left: 50%;
+    font-size: 8vw;
+    font-family: 'Pacifico', cursive;
+    -webkit-animation: 3s ease 0s normal forwards 1 fadein;
+    -webkit-animation: fadein 10s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 10s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 10s;
+    /* Internet Explorer */
+    -o-animation: fadein 10s;
+    /* Opera < 12.1 */
+    animation: fadein 15s;
+
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.missionContent {
+    font-size: 1.5em;
+    padding-top: 0%;
+
+    padding-left: 12%;
+    background-color: #a8e6cf;
+    padding-right: 12%;
+
+
+}
+
+#map {
+    height: 50rem;
+
+
+}
+
+.leftCol {
+
+    max-width: 65%;
+
+}
+
+.rightCol {
+
+    max-width: 34%;
+
+}
+
+button {
+    font-size: 110%;
+    padding: 10px;
+    margin: 10px;
+    color: #fdfd96;
+    background-color: #779ecb;
+    border-radius: 10px;
+}
+
+#upload {
+
+    border-color: #fdfd96;
+    border-style: solid;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+/*gallery sh*t */
+
+
+#galleryContainer {
+
+
+    margin: auto;
+    margin-right: 0px;
+
+
+
+    overflow-y: scroll;
+
+
+}
+
+#galleryContainer img {
+
+    float: left;
+    margin: 25px 0 0 25px;
+
 }

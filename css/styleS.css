@@ -15,7 +15,7 @@ h1 {
 body {
 
     margin: 4%;
-    background-color: #0088;
+    background-color: #af94e1;
 
 
 
@@ -23,6 +23,10 @@ body {
 
 
 
+}
+
+p {
+    font-size: 5em;
 }
 
 .break {
@@ -33,11 +37,13 @@ body {
 }
 
 html {
-    font-size: 2.5em;
+    font-size: 3.5em;
 }
 
+#list {
 
-
+    color: yellow;
+}
 
 
 
@@ -78,7 +84,7 @@ html {
 
 .churchContent p {
     padding: 4%;
-    font-size: 4em;
+    /*   font-size: 4em;*/
 
 }
 
@@ -106,4 +112,58 @@ html {
     color: #a8e6cf;
 
 
+}
+
+#map {
+    height: 22rem;
+
+
+}
+
+
+button {
+    font-size: 130%;
+    padding: 20px;
+    margin: 10px;
+    color: #fdfd96;
+    background-color: #779ecb;
+    border-radius: 10px;
+}
+
+#upload {
+
+    border-color: #fdfd96;
+    border-style: solid;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+/*gallery sh*t */
+
+
+#galleryContainer {
+
+
+    margin: auto;
+    margin-right: 0px;
+
+
+
+    overflow-y: scroll;
+
+
+}
+
+#galleryContainer img {
+
+    float: left;
+    margin: 25px 0 0 25px;
+
+}
+
+#missionPreface {
+
+
+    color: #fdfd96;
+    font-size: 1.5em;
 }

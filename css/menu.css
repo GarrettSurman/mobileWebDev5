@@ -11,7 +11,7 @@ https://codepen.io/erikterwan/details/EVzeRP/
     position: fixed;
     top: 25px;
     left: 25px;
-    z-index: 1;
+    z-index: 4;
 
     -webkit-user-select: none;
     user-select: none;
@@ -29,7 +29,7 @@ https://codepen.io/erikterwan/details/EVzeRP/
 
     opacity: 0;
     /* hide this */
-    z-index: 2;
+    z-index: 5;
     /* and place it over the hamburger */
 
     -webkit-touch-callout: none;
@@ -47,7 +47,7 @@ https://codepen.io/erikterwan/details/EVzeRP/
 
     background: #ffffff;
 
-    z-index: 1;
+    z-index: 4;
 
     transform-origin: 4px 0px;
 
@@ -105,7 +105,8 @@ https://codepen.io/erikterwan/details/EVzeRP/
 */
     padding-top: 125px;
 
-    background-image: linear-gradient(to right bottom, #ffffff, #f6eeff, #f3dcff, #f6c8ff, #fdb1ff);
+
+    background-image: linear-gradient(to right bottom, #fdfd96, #e4fca1, #cff9ae, #bef4ba, #b1efc5, #a0e8cb, #92e0d0, #89d7d3, #78cad5, #6fbcd6, #70aed3, #779ecb);
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
@@ -140,7 +141,7 @@ https://codepen.io/erikterwan/details/EVzeRP/
         sans-serif;
 
 
-
+    z-index: 4;
 }
 
 
@@ -150,7 +151,7 @@ https://codepen.io/erikterwan/details/EVzeRP/
     position: fixed;
     background-color: rgba(100, 0, 0, 0.2);
     ;
-
+    z-index: 3;
     height: 600px;
     width: 600px;
     margin-left: -420px;
