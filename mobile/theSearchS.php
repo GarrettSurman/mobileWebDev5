@@ -36,6 +36,7 @@ $mobile=false;
     <link rel="stylesheet" href="../css/menuS.css" type="text/css">
 
 
+
 </head>
 
 <body>
@@ -112,7 +113,7 @@ $mobile=false;
         var pos
 
 
-        var markersArray = [];
+
 
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
@@ -177,34 +178,8 @@ $mobile=false;
 
 
 
-        function setMapOnAll(map) {
-            for (var i = 0; i < markersArray.length; i++) {
-                markersArray[i].setMap(map);
-            }
-        }
 
 
-        function addMarker(location) {
-
-            map.setCenter(myLCCCvar);
-
-            var marker = new google.maps.Marker({
-                position: location,
-                animation: google.maps.Animation.DROP,
-                map: map
-            });
-
-            markersArray.push(marker);
-        }
-
-        function clearMarkers() {
-            setMapOnAll(null);
-        }
-
-        function deleteMarkers() {
-            clearMarkers();
-            markers = [];
-        }
 
         function showMe() {
             map.setCenter(pos);
@@ -226,6 +201,8 @@ $mobile=false;
 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_oCCDtHufA5qSbfu2CEcIsxdgZjUkTao&callback=initMap">
     </script>
+
+
 
 </body>
 

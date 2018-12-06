@@ -76,7 +76,7 @@ $mobile=false;
     <div class="missionContent">
 
 
-        <button onclick="addMarker(myCC)">Find Nearby Unicorn</button>
+        <button onclick="getClosest(pos)">Find Nearby Unicorn</button>
 
         <button onclick="showMe()">Where Am I ? </button>
 
@@ -111,7 +111,7 @@ $mobile=false;
         // failed.", it means you probably did not give permission for the browser to
         // locate you.
         var map, infoWindow;
-
+        var pos = getPos();
 
         // var for lat and lon for pin in courtyard
         var myLCCCvar = {
@@ -120,105 +120,146 @@ $mobile=false;
         }
 
 
-        var pos
-
 
         var markersArray = [];
 
-        function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: {
+        console.log("1 initialize =  " + pos);
 
-                    lat: 41.412996,
-                    lng: -82.072678
+
+        var myLat
+        var myLng
+
+
+        function getPos() {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                    pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    }
+
+                    myLat = position.coords.latitude
+                    myLng = position.coords.longitude
+
+                    meMarker = new google.maps.Marker({
+                        position: pos,
+                        map: map,
+                        icon: "imgz/man.png",
+                        title: 'YOU'
+                    });
+
+                    infoWindow.setPosition(pos);
+                    map.setCenter(pos);
+
+                    console.log(" geo =  " + pos);
+
                 },
-                zoom: 16
-            });
-            infoWindow = new google.maps.InfoWindow;
+                function() {
+                    handleLocationError(true, infoWindow, map.getCenter());
 
-            /*
-            // pin in courtyard
-            var marker = new google.maps.Marker({
-            position: myLCCCvar,
-            map: map,
-
-            title: 'lccc'
-            });*/
+                });
+        }
 
 
+
+        function initMap() {
+            getPos;
+            var meMarker
 
             // Try HTML5 geolocation.
             if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function(position) {
-                        pos = {
-                            lat: position.coords.latitude,
-                            lng: position.coords.longitude
-                        };
-
-
-
-
-                        var meMarker = new google.maps.Marker({
-                            position: pos,
-                            map: map,
-                            icon: "imgz/man.png",
-                            title: 'lccc'
-                        });
-
-
-
-
-                    },
-                    function() {
-                        handleLocationError(true, infoWindow, map.getCenter());
-
-                    });
-
 
             } else {
                 // Browser doesn't support Geolocation
                 handleLocationError(false, infoWindow, map.getCenter());
             }
-            /*    infoWindow.setPosition(myLCCCvar);
-                infoWindow.open(map);
-                infoWindow.setPosition(myLCCCvar);*/
-
-
-        }
+            /*end geo*/
 
 
 
-        function setMapOnAll(map) {
-            for (var i = 0; i < markersArray.length; i++) {
-                markersArray[i].setMap(map);
-            }
-        }
+            console.log(" map =  " + getPos());
 
 
-        function addMarker(location) {
 
-            map.setCenter(myLCCCvar);
 
-            var marker = new google.maps.Marker({
-                position: location,
-                animation: google.maps.Animation.DROP,
-                map: map
+
+
+            /*start init map*/
+            map = new google.maps.Map(document.getElementById('map'), {
+
+
+                center: {
+                    lat: 41.412996,
+                    lng: -82.072678
+                },
+                zoom: 16
+
+
             });
 
-            markersArray.push(marker);
+            /*end init map
+             */
+
+
+
+
+            /*start places*/
+
+            var service = new google.maps.places.PlacesService(map);
+            console.log(" service =  " + pos);
+
+            service.nearbySearch({
+
+
+                location: pos,
+                radius: 3500,
+                type: ['park']
+            }, callback);
+
+
+
+
+            infoWindow = new google.maps.InfoWindow;
+
+
+
+            /**/
+            function callback(results, status) {
+                if (status === google.maps.places.PlacesServiceStatus.OK) {
+                    for (var i = 0; i < results.length; i++) {
+                        createMarker(results[i])
+
+                        markersArray = results;
+
+
+                    }
+                }
+            }
+
+            function createMarker(place) {
+                var placeLoc = place.geometry.location;
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: place.geometry.location
+                });
+
+
+            }
+
+
+
+            /*end places
+             */
+
+
+
         }
 
-        function clearMarkers() {
-            setMapOnAll(null);
-        }
 
-        function deleteMarkers() {
-            clearMarkers();
-            markers = [];
-        }
 
         function showMe() {
             map.setCenter(pos);
+            console.log(" showme =  " + pos);
+
 
         }
         //error catching stuff
@@ -229,14 +270,43 @@ $mobile=false;
                 'Error: The Geolocation service failed.' :
                 'Error: Your browser doesn\'t support geolocation.');
             infoWindow.open(map);
+
+        }
+
+        /*close enough stuff*/
+        function getDistance(sourceLat, sourceLng, destinationLat, destinationLng) {
+
+
+
+            return google.maps.geometry.spherical.computeDistanceBetween(
+                new google.maps.LatLng(sourceLat, sourceLng),
+                new google.maps.LatLng(destinationLat, destinationLng)
+            );
+        }
+
+        var lat;
+        var lng;
+
+        function getClosest() {
+
+            for (var i = 0; i < markersArray.length; i++) {
+                lat = markersArray[i].geometry.location.lat();
+                lng = markersArray[i].geometry.location.lng();
+
+
+
+                var closestPlace = getDistance(myLat, myLng, lat, lng)
+                return closestPlace;
+            }
         }
 
     </script>
 
-
-
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_oCCDtHufA5qSbfu2CEcIsxdgZjUkTao&callback=initMap">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3&libraries=geometry"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_oCCDtHufA5qSbfu2CEcIsxdgZjUkTao&callback=initMap&libraries=places">
     </script>
+
+
 
 </body>
 
